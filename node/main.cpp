@@ -2,7 +2,6 @@
 using namespace std;
 struct node{
     int data=0;
-    int nodeIndex;
     node *prior;
     node *next;
 };
@@ -21,7 +20,6 @@ int main() {
     node *q=nullptr;
     p->prior=nullptr;
     p->next=nullptr;
-    p->nodeIndex=1;
     int arrcap=1;
     while (true) {
         if(arrcap==1){
@@ -38,7 +36,7 @@ int main() {
                 p->next=q;
                 q->prior=p;
                 q->next=nullptr;
-                q->nodeIndex=++arrcap;
+                arrcap++;
                 q->data=val;
                 p=q;
                 q=nullptr;

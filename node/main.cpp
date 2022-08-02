@@ -13,6 +13,7 @@ int main() {
     cout<<"4: Insert a node into the array (not implemented yet)"<<endl;
     cout<<"5: Delete a node from the array (not implemented yet)"<<endl;
     cout<<"6: Exit"<<endl;
+    cout<<"7: Help"<<endl;
     //init
     int op,val,val2;
     node *head=new node;
@@ -25,7 +26,7 @@ int main() {
         if(arrcap==1){
             cout<<"Currently the array contains "<<arrcap<<" node."<<endl<<"What do you want to do?"<<endl;
         }else{
-            cout<<"Currently the array contains "<<arrcap<<" nodes."<<endl<<"What do you want to do?"<<endl;
+            cout<<"Currently the array contains "<<arrcap<<" nodes."<<endl<<"What do you want to do? (type 7 for help)"<<endl;
         }
         cin>>op;
         switch (op) {
@@ -74,8 +75,24 @@ int main() {
                     rp=head;
                 }
                 break;
+            case 4:
+                cout<<"Operation not implemented!(yet)"<<endl;
+                break;
+            case 5:
+                cout<<"Operation not implemented!(yet)"<<endl;
+                break;
             case 6:
                 return 0;
+                break;
+            case 7:
+                cout<<"The following operations are available:"<<endl;
+                cout<<"1: Add a node to the end of the array"<<endl;
+                cout<<"2: Print the value of a node"<<endl;
+                cout<<"3: Assign a number to a node"<<endl;
+                cout<<"4: Insert a node into the array (not implemented yet)"<<endl;
+                cout<<"5: Delete a node from the array (not implemented yet)"<<endl;
+                cout<<"6: Exit"<<endl;
+                cout<<"7: Help"<<endl;
                 break;
             default:
                 cout<<"Invalid operation!"<<endl;

@@ -44,11 +44,15 @@ int main() {
             case 2:
                 cout<<"Please enter the index of the node:"<<endl;
                 cin>>val;
-                rp=head;
-                for (int i=1; i<val; i++) {
-                    rp=rp->next;
+                if (val>arrcap) {
+                    cout<<"That node does not exist!"<<endl;
+                }else{
+                    rp=head;
+                    for (int i=1; i<val; i++) {
+                        rp=rp->next;
+                    }
+                    cout<<"The value of that node is "<<rp->data<<"."<<endl;
                 }
-                cout<<"The value of that node is "<<rp->data<<"."<<endl;
                 break;
             default:
                 cout<<"Invalid operation!"<<endl;

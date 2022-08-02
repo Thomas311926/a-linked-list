@@ -51,6 +51,7 @@ int main() {
                 cout<<"The value of that node is "<<rp->data<<"."<<endl;
                 break;
             default:
+                cout<<"Invalid operation!"<<endl;
                 break;
         }
     }

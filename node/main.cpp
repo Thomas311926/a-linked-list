@@ -8,9 +8,9 @@ struct node{
 };
 int main() {
     cout<<"Welcome to this array, the following operations are available:"<<endl;
-    cout<<"1: add a node to the end of the array"<<endl;
-    cout<<"2: print the value of a node"<<endl;
-    cout<<"3: assign a number to a node (not implemented yet)"<<endl;
+    cout<<"1: Add a node to the end of the array"<<endl;
+    cout<<"2: Print the value of a node"<<endl;
+    cout<<"3: Assign a number to a node (not implemented yet)"<<endl;
     //cout<<""<<endl;
     //init
     int op,val;
@@ -48,7 +48,7 @@ int main() {
                 for (int i=1; i<val; i++) {
                     rp=rp->next;
                 }
-                cout<<rp->data<<endl;
+                cout<<"The value of that node is "<<rp->data<<"."<<endl;
                 break;
             default:
                 break;

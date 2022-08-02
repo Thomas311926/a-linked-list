@@ -40,7 +40,7 @@ int main() {
                 q->data=val;
                 p=q;
                 q=nullptr;
-                cout<<"Operation successful."<<endl;
+                cout<<"A node with the index "<<arrcap<<" has been added to the end of the array."<<endl;
                 break;
             case 2:
                 cout<<"Please enter the index of the node:"<<endl;
@@ -68,7 +68,7 @@ int main() {
                     for (int i=1; i<val; i++) {
                         rp=rp->next;
                     }
-                    cout<<"The value of node "<<val<<" was changed from "<<rp->data<<" to ";
+                    cout<<"The value of node "<<val<<" has been changed from "<<rp->data<<" to ";
                     rp->data=val2;
                     cout<<rp->data<<"."<<endl;
                     rp=head;

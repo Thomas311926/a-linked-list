@@ -11,7 +11,9 @@ int main() {
     cout<<"1: Add a node to the end of the array"<<endl;
     cout<<"2: Print the value of a node"<<endl;
     cout<<"3: Assign a number to a node (not implemented yet)"<<endl;
-    //cout<<""<<endl;
+    cout<<"4: Insert a node into the array (not implemented yet)"<<endl;
+    cout<<"5: Delete a node from the array (not implemented yet)"<<endl;
+    cout<<"6: Exit"<<endl;
     //init
     int op,val;
     node *head=new node;
@@ -53,6 +55,9 @@ int main() {
                     }
                     cout<<"The value of that node is "<<rp->data<<"."<<endl;
                 }
+                break;
+            case 6:
+                return 0;
                 break;
             default:
                 cout<<"Invalid operation!"<<endl;

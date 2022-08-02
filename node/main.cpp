@@ -10,12 +10,12 @@ int main() {
     cout<<"Welcome to this array, the following operations are available:"<<endl;
     cout<<"1: Add a node to the end of the array"<<endl;
     cout<<"2: Print the value of a node"<<endl;
-    cout<<"3: Assign a number to a node (not implemented yet)"<<endl;
+    cout<<"3: Assign a number to a node"<<endl;
     cout<<"4: Insert a node into the array (not implemented yet)"<<endl;
     cout<<"5: Delete a node from the array (not implemented yet)"<<endl;
     cout<<"6: Exit"<<endl;
     //init
-    int op,val;
+    int op,val,val2;
     node *head=new node;
     node *p=head,*rp=nullptr;
     node *q=nullptr;
@@ -42,6 +42,7 @@ int main() {
                 q->data=val;
                 p=q;
                 q=nullptr;
+                cout<<"Operation successful."<<endl;
                 break;
             case 2:
                 cout<<"Please enter the index of the node:"<<endl;
@@ -54,6 +55,25 @@ int main() {
                         rp=rp->next;
                     }
                     cout<<"The value of that node is "<<rp->data<<"."<<endl;
+                    rp=head;
+                }
+                break;
+            case 3:
+                cout<<"Please enter the index of the node that you would like to assign to:"<<endl;
+                cin>>val;
+                cout<<"Pleas enter the value that you would like to assign to that node:"<<endl;
+                cin>>val2;
+                if (val>arrcap) {
+                    cout<<"That node does not exist!"<<endl;
+                }else{
+                    rp=head;
+                    for (int i=1; i<val; i++) {
+                        rp=rp->next;
+                    }
+                    cout<<"The value of node "<<val<<" was changed from "<<rp->data<<" to ";
+                    rp->data=val2;
+                    cout<<rp->data<<"."<<endl;
+                    rp=head;
                 }
                 break;
             case 6:

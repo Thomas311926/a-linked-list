@@ -10,7 +10,7 @@ int main() {
     cout<<"Welcome to this array, the following operations are available:"<<endl;
     cout<<"1: add a node to the end of the array"<<endl;
     cout<<"2: print the value of a node"<<endl;
-    cout<<"3: assign a number to a node(not implemented yet)"<<endl;
+    cout<<"3: assign a number to a node (not implemented yet)"<<endl;
     //cout<<""<<endl;
     //init
     int op,val;

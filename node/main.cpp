@@ -95,6 +95,27 @@ int main() {
                     }
                     cout<<"Please enter the value that will be stroed in this new node:"<<endl;
                     cin>>val2;
+                    if (val==arrcap) {
+                        q=new node;//request space
+                        p->next=q;
+                        q->prior=p;
+                        q->next=nullptr;
+                        arrcap++;
+                        q->data=val2;
+                        p=q;//update end location
+                        q=nullptr;
+                        rp=head;
+                        cout<<"A node with the index "<<arrcap<<" has been added to the end of the linked list."<<endl;
+                    }else if (val==1){
+                        insn=new node;
+                        insn->data=val2;
+                        insn->prior=nullptr;
+                        insn->next=rp;
+                        rp->prior=insn;
+                        arrcap++;
+                        cout<<"Successfully inserted a new node between node at the start of the linked list"<<endl;
+                        rp=head;
+                    }
                     insn=new node;
                     insn->data=val2;
                     insn->prior=rp->prior;

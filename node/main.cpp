@@ -6,12 +6,12 @@ struct node{
     node *next;
 };
 int main() {
-    cout<<"Welcome to this array, the following operations are available:"<<endl;
-    cout<<"1: Add a node to the end of the array"<<endl;
+    cout<<"Welcome to this linked list, the following operations are available:"<<endl;
+    cout<<"1: Add a node to the end of the linked list"<<endl;
     cout<<"2: Print the value of a node"<<endl;
     cout<<"3: Assign a number to a node"<<endl;
-    cout<<"4: Insert a node into the array (not implemented yet)"<<endl;
-    cout<<"5: Delete a node from the array (not implemented yet)"<<endl;
+    cout<<"4: Insert a node into the linked list (not implemented yet)"<<endl;
+    cout<<"5: Delete a node from the linked list (not implemented yet)"<<endl;
     cout<<"6: Exit"<<endl;
     cout<<"7: Help"<<endl;
     //init
@@ -24,9 +24,9 @@ int main() {
     int arrcap=1;
     while (true) {
         if(arrcap==1){
-            cout<<"Currently the array contains "<<arrcap<<" node."<<endl<<"What do you want to do?"<<endl;
+            cout<<"Currently the linked list contains "<<arrcap<<" node."<<endl<<"What do you want to do? (type 7 for help)"<<endl;
         }else{
-            cout<<"Currently the array contains "<<arrcap<<" nodes."<<endl<<"What do you want to do? (type 7 for help)"<<endl;
+            cout<<"Currently the linked list contains "<<arrcap<<" nodes."<<endl<<"What do you want to do? (type 7 for help)"<<endl;
         }
         cin>>op;
         switch (op) {
@@ -41,7 +41,7 @@ int main() {
                 q->data=val;
                 p=q;
                 q=nullptr;
-                cout<<"A node with the index "<<arrcap<<" has been added to the end of the array."<<endl;
+                cout<<"A node with the index "<<arrcap<<" has been added to the end of the linked list."<<endl;
                 break;
             case 2:
                 cout<<"Please enter the index of the node:"<<endl;
@@ -86,11 +86,11 @@ int main() {
                 break;
             case 7:
                 cout<<"The following operations are available:"<<endl;
-                cout<<"1: Add a node to the end of the array"<<endl;
+                cout<<"1: Add a node to the end of the linked list"<<endl;
                 cout<<"2: Print the value of a node"<<endl;
                 cout<<"3: Assign a number to a node"<<endl;
-                cout<<"4: Insert a node into the array (not implemented yet)"<<endl;
-                cout<<"5: Delete a node from the array (not implemented yet)"<<endl;
+                cout<<"4: Insert a node into the linked list (not implemented yet)"<<endl;
+                cout<<"5: Delete a node from the linked list (not implemented yet)"<<endl;
                 cout<<"6: Exit"<<endl;
                 cout<<"7: Help"<<endl;
                 break;

@@ -19,7 +19,7 @@ int main() {
     cout<<"3: Assign a number to a node"<<endl;
     cout<<"4: Insert a node into the linked list"<<endl;
     cout<<"5: Delete a node from the linked list"<<endl;
-    cout<<"6: Print out the all the nodes linked list (not implemented yet)"<<endl;
+    cout<<"6: Print out the all the nodes linked list"<<endl;
     cout<<"7: Exit"<<endl;
     cout<<"8: Help"<<endl;
     //init
@@ -177,7 +177,7 @@ int main() {
                 cout<<"3: Assign a number to a node"<<endl;
                 cout<<"4: Insert a node into the linked list"<<endl;
                 cout<<"5: Delete a node from the linked list"<<endl;
-                cout<<"6: Print out the all the nodes linked list (not implemented yet)"<<endl;
+                cout<<"6: Print out the all the nodes linked list"<<endl;
                 cout<<"7: Exit"<<endl;
                 cout<<"8: Help"<<endl;
                 break;

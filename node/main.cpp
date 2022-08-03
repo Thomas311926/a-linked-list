@@ -116,8 +116,9 @@ int main() {
                 cout<<"3: Assign a number to a node"<<endl;
                 cout<<"4: Insert a node into the linked list (not implemented yet)"<<endl;
                 cout<<"5: Delete a node from the linked list (not implemented yet)"<<endl;
-                cout<<"6: Exit"<<endl;
-                cout<<"7: Help"<<endl;
+                cout<<"6: Print out the whole linked list (not implemented yet)"<<endl;
+                cout<<"7: Exit"<<endl;
+                cout<<"8: Help"<<endl;
                 break;
             default:
                 cout<<"Invalid operation!"<<endl;

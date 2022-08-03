@@ -10,7 +10,7 @@ int main() {
     cout<<"1: Add a node to the end of the linked list"<<endl;
     cout<<"2: Print the value of a node"<<endl;
     cout<<"3: Assign a number to a node"<<endl;
-    cout<<"4: Insert a node into the linked list (not implemented yet)"<<endl;
+    cout<<"4: Insert a node into the linked list"<<endl;
     cout<<"5: Delete a node from the linked list (not implemented yet)"<<endl;
     cout<<"6: Print out the whole linked list (not implemented yet)"<<endl;
     cout<<"7: Exit"<<endl;
@@ -114,7 +114,7 @@ int main() {
                 cout<<"1: Add a node to the end of the linked list"<<endl;
                 cout<<"2: Print the value of a node"<<endl;
                 cout<<"3: Assign a number to a node"<<endl;
-                cout<<"4: Insert a node into the linked list (not implemented yet)"<<endl;
+                cout<<"4: Insert a node into the linked list"<<endl;
                 cout<<"5: Delete a node from the linked list (not implemented yet)"<<endl;
                 cout<<"6: Print out the whole linked list (not implemented yet)"<<endl;
                 cout<<"7: Exit"<<endl;

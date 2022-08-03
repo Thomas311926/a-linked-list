@@ -17,7 +17,7 @@ int main() {
     //init
     int op,val,val2;
     node *head=new node;
-    node *p=head,*rp=nullptr;
+    node *p=head,*rp=nullptr,*insn=nullptr;
     node *q=nullptr;
     p->prior=nullptr;
     p->next=nullptr;
@@ -76,7 +76,28 @@ int main() {
                 }
                 break;
             case 4:
-                cout<<"Operation not implemented!(yet)"<<endl;
+                cout<<"Please enter the index of the node that will be to the left of the new node (for example, if you want to insert a new node between nodes 3 and 4, enter 3):"<<endl;
+                cin>>val;
+                if (val>arrcap) {
+                    cout<<"That node does not exist!"<<endl;
+                }else{
+                    rp=head;
+                    for (int i=1; i<=val; i++) {
+                        rp=rp->next;
+                    }
+                    cout<<"Please enter the value that will be stroed in this new node:"<<endl;
+                    cin>>val2;
+                    insn=new node;
+                    insn->data=val2;
+                    insn->prior=rp->prior;
+                    rp->prior->next=insn;
+                    insn->next=rp;
+                    rp->prior=insn;
+                    arrcap++;
+                    cout<<"Successfully inserted a new node between node "<<val<<" and node "<<val+1<<"."<<endl;
+                    rp=head;
+                }
+                
                 break;
             case 5:
                 cout<<"Operation not implemented!(yet)"<<endl;

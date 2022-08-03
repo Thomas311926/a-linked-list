@@ -18,18 +18,18 @@ int main() {
     cout<<"2: Print the value of a node"<<endl;
     cout<<"3: Assign a number to a node"<<endl;
     cout<<"4: Insert a node into the linked list"<<endl;
-    cout<<"5: Delete a node from the linked list (not implemented yet)"<<endl;
+    cout<<"5: Delete a node from the linked list"<<endl;
     cout<<"6: Print out the all the nodes linked list (not implemented yet)"<<endl;
     cout<<"7: Exit"<<endl;
     cout<<"8: Help"<<endl;
     //init
     int op,val,val2;
     node *head=new node;
-    node *p=head,*rp=nullptr,*insn=nullptr;
-    node *q=nullptr;
+    node *p=head,*rp=nullptr,*insn=nullptr;//p is the location of the end of the linked list, rp is used to get the address of a specific node
+    node *q=nullptr;//q is used to allocate space
     p->prior=nullptr;
     p->next=nullptr;
-    int arrcap=1;
+    int arrcap=1;//the number of nodes in the linked list
     while (true) {
         if(arrcap==1){
             cout<<"Currently the linked list contains "<<arrcap<<" node."<<endl<<"What do you want to do? (type 8 for help)"<<endl;
@@ -41,13 +41,13 @@ int main() {
             case 1:
                 cout<<"Please enter the value that wil be stored this node:"<<endl;
                 cin>>val;
-                q=new node;
+                q=new node;//request space
                 p->next=q;
                 q->prior=p;
                 q->next=nullptr;
                 arrcap++;
                 q->data=val;
-                p=q;
+                p=q;//update end location
                 q=nullptr;
                 cout<<"A node with the index "<<arrcap<<" has been added to the end of the linked list."<<endl;
                 break;
@@ -108,7 +108,38 @@ int main() {
                 
                 break;
             case 5:
-                cout<<"Operation not implemented!(yet)"<<endl;
+                cout<<"Please enter the index of the node that will be deleted:"<<endl;
+                cin>>val;
+                if (val>arrcap) {
+                    cout<<"That node does not exist!"<<endl;
+                }else{
+                    rp=head;
+                    for (int i=1; i<val; i++) {
+                        rp=rp->next;
+                    }
+                    if (val==1&&arrcap==1) {//Prevent EXC_BAD_ACCESS
+                        cout<<"Error: That node is the only node in the linked list and can't be deleted!"<<endl;//EXC_BAD_ACCESS will occur at operation one if this is deleted
+                    }else if (val==1) {
+                        rp->next->prior=nullptr;
+                        head=rp->next;//move head location
+                        delete rp;
+                        arrcap--;
+                        cout<<"Successfully deleted that node."<<endl;
+                    }else if (val==arrcap){
+                        rp->prior->next=nullptr;
+                        p=rp->prior;//move end location
+                        delete rp;
+                        arrcap--;
+                        cout<<"Successfully deleted that node."<<endl;
+                    }else{
+                        rp->prior->next=rp->next;
+                        rp->next->prior=rp->prior;
+                        delete rp;
+                        arrcap--;
+                        cout<<"Successfully deleted that node."<<endl;
+                    }
+                    rp=head;
+                }
                 break;
             case 6:
                 cout<<"Operation not implemented!(yet)"<<endl;
@@ -122,7 +153,7 @@ int main() {
                 cout<<"2: Print the value of a node"<<endl;
                 cout<<"3: Assign a number to a node"<<endl;
                 cout<<"4: Insert a node into the linked list"<<endl;
-                cout<<"5: Delete a node from the linked list (not implemented yet)"<<endl;
+                cout<<"5: Delete a node from the linked list"<<endl;
                 cout<<"6: Print out the all the nodes linked list (not implemented yet)"<<endl;
                 cout<<"7: Exit"<<endl;
                 cout<<"8: Help"<<endl;

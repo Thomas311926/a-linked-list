@@ -84,7 +84,7 @@ int main() {
                 }
                 break;
             case 4:
-                cout<<"Please enter the index of the node that will be to the left of the new node (for example, if you want to insert a new node between nodes 3 and 4, enter 3):"<<endl;
+                cout<<"Please enter the index of the node that will be to the left of the new node (for example, if you want to insert a new node between nodes 3 and 4, enter 3; If you would like to insert to the beginning of the array, enter 0):"<<endl;
                 cin>>val;
                 if (val>arrcap) {
                     cout<<"That node does not exist!"<<endl;
@@ -95,15 +95,38 @@ int main() {
                     }
                     cout<<"Please enter the value that will be stroed in this new node:"<<endl;
                     cin>>val2;
-                    insn=new node;
-                    insn->data=val2;
-                    insn->prior=rp->prior;
-                    rp->prior->next=insn;
-                    insn->next=rp;
-                    rp->prior=insn;
-                    arrcap++;
-                    cout<<"Successfully inserted a new node between node "<<val<<" and node "<<val+1<<"."<<endl;
-                    rp=head;
+                    if (val==arrcap) {
+                        q=new node;//request space
+                        p->next=q;
+                        q->prior=p;
+                        q->next=nullptr;
+                        arrcap++;
+                        q->data=val2;
+                        p=q;//update end location
+                        q=nullptr;
+                        rp=head;
+                        cout<<"A node with the index "<<arrcap<<" has been added to the end of the linked list."<<endl;
+                    }else if (val==0){
+                        insn=new node;
+                        insn->data=val2;
+                        insn->prior=nullptr;
+                        insn->next=rp;
+                        rp->prior=insn;
+                        head=insn;
+                        arrcap++;
+                        cout<<"Successfully inserted a new node between node at the start of the linked list"<<endl;
+                        rp=head;
+                    }else{
+                        insn=new node;
+                        insn->data=val2;
+                        insn->prior=rp->prior;
+                        rp->prior->next=insn;
+                        insn->next=rp;
+                        rp->prior=insn;
+                        arrcap++;
+                        cout<<"Successfully inserted a new node between node "<<val<<" and node "<<val+1<<"."<<endl;
+                        rp=head;
+                    }
                 }
                 
                 break;

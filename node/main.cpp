@@ -84,7 +84,7 @@ int main() {
                 }
                 break;
             case 4:
-                cout<<"Please enter the index of the node that will be to the left of the new node (for example, if you want to insert a new node between nodes 3 and 4, enter 3):"<<endl;
+                cout<<"Please enter the index of the node that will be to the left of the new node (for example, if you want to insert a new node between nodes 3 and 4, enter 3; If you would like to insert to the beginning of the array, enter 0):"<<endl;
                 cin>>val;
                 if (val>arrcap) {
                     cout<<"That node does not exist!"<<endl;
@@ -112,6 +112,7 @@ int main() {
                         insn->prior=nullptr;
                         insn->next=rp;
                         rp->prior=insn;
+                        head=insn;
                         arrcap++;
                         cout<<"Successfully inserted a new node between node at the start of the linked list"<<endl;
                         rp=head;

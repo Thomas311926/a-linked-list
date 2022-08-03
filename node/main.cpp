@@ -106,7 +106,7 @@ int main() {
                         q=nullptr;
                         rp=head;
                         cout<<"A node with the index "<<arrcap<<" has been added to the end of the linked list."<<endl;
-                    }else if (val==1){
+                    }else if (val==0){
                         insn=new node;
                         insn->data=val2;
                         insn->prior=nullptr;

@@ -12,8 +12,9 @@ int main() {
     cout<<"3: Assign a number to a node"<<endl;
     cout<<"4: Insert a node into the linked list (not implemented yet)"<<endl;
     cout<<"5: Delete a node from the linked list (not implemented yet)"<<endl;
-    cout<<"6: Exit"<<endl;
-    cout<<"7: Help"<<endl;
+    cout<<"6: Print out the whole linked list (not implemented yet)"<<endl;
+    cout<<"7: Exit"<<endl;
+    cout<<"8: Help"<<endl;
     //init
     int op,val,val2;
     node *head=new node;
@@ -24,9 +25,9 @@ int main() {
     int arrcap=1;
     while (true) {
         if(arrcap==1){
-            cout<<"Currently the linked list contains "<<arrcap<<" node."<<endl<<"What do you want to do? (type 7 for help)"<<endl;
+            cout<<"Currently the linked list contains "<<arrcap<<" node."<<endl<<"What do you want to do? (type 8 for help)"<<endl;
         }else{
-            cout<<"Currently the linked list contains "<<arrcap<<" nodes."<<endl<<"What do you want to do? (type 7 for help)"<<endl;
+            cout<<"Currently the linked list contains "<<arrcap<<" nodes."<<endl<<"What do you want to do? (type 8 for help)"<<endl;
         }
         cin>>op;
         switch (op) {
@@ -103,9 +104,12 @@ int main() {
                 cout<<"Operation not implemented!(yet)"<<endl;
                 break;
             case 6:
-                return 0;
+                cout<<"Operation not implemented!(yet)"<<endl;
                 break;
             case 7:
+                return 0;
+                break;
+            case 8:
                 cout<<"The following operations are available:"<<endl;
                 cout<<"1: Add a node to the end of the linked list"<<endl;
                 cout<<"2: Print the value of a node"<<endl;

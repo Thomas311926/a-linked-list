@@ -116,16 +116,17 @@ int main() {
                         arrcap++;
                         cout<<"Successfully inserted a new node between node at the start of the linked list"<<endl;
                         rp=head;
+                    }else{
+                        insn=new node;
+                        insn->data=val2;
+                        insn->prior=rp->prior;
+                        rp->prior->next=insn;
+                        insn->next=rp;
+                        rp->prior=insn;
+                        arrcap++;
+                        cout<<"Successfully inserted a new node between node "<<val<<" and node "<<val+1<<"."<<endl;
+                        rp=head;
                     }
-                    insn=new node;
-                    insn->data=val2;
-                    insn->prior=rp->prior;
-                    rp->prior->next=insn;
-                    insn->next=rp;
-                    rp->prior=insn;
-                    arrcap++;
-                    cout<<"Successfully inserted a new node between node "<<val<<" and node "<<val+1<<"."<<endl;
-                    rp=head;
                 }
                 
                 break;

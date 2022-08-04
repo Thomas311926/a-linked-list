@@ -1,9 +1,14 @@
 /*
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is free software: you can redistribute it and/or modify it under the terms of
+the GNU General Public License as published by the Free Software Foundation, either
+version 3 of the License, or (at your option) any later version.
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License along with this program.
+If not, see <https://www.gnu.org/licenses/>.
 */
 #define NULL 0
 #include <iostream>
@@ -20,7 +25,7 @@ int main() {
     cout<<"3: Assign a number to a node"<<endl;
     cout<<"4: Insert a node into the linked list"<<endl;
     cout<<"5: Delete a node from the linked list"<<endl;
-    cout<<"6: Print out the all the nodes linked list (not implemented yet)"<<endl;
+    cout<<"6: Print out the all the nodes linked list"<<endl;
     cout<<"7: Exit"<<endl;
     cout<<"8: Help"<<endl;
     //init
@@ -166,7 +171,14 @@ int main() {
                 }
                 break;
             case 6:
-                cout<<"Operation not implemented!(yet)"<<endl;
+                rp=head;
+                cout<<rp->data<<" ";
+                for (int i=1; i<arrcap; i++) {
+                    rp=rp->next;
+                    cout<<rp->data<<" ";
+                }
+                cout<<endl;
+                rp=head;
                 break;
             case 7:
                 return 0;
@@ -178,7 +190,7 @@ int main() {
                 cout<<"3: Assign a number to a node"<<endl;
                 cout<<"4: Insert a node into the linked list"<<endl;
                 cout<<"5: Delete a node from the linked list"<<endl;
-                cout<<"6: Print out the all the nodes linked list (not implemented yet)"<<endl;
+                cout<<"6: Print out the all the nodes linked list"<<endl;
                 cout<<"7: Exit"<<endl;
                 cout<<"8: Help"<<endl;
                 break;

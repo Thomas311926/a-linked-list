@@ -172,6 +172,7 @@ int main() {
                 break;
             case 6:
                 rp=head;
+                cout<<rp->data<<" ";
                 for (int i=1; i<arrcap; i++) {
                     rp=rp->next;
                     cout<<rp->data<<" ";
